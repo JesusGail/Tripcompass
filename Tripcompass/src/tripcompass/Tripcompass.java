@@ -18,6 +18,8 @@ public class Tripcompass {
         System.out.println("Hola peñita");
         System.out.println("Hey que pasa");
         System.out.println("Pruebaaaaaaa");
+        System.out.println("Pruebaaaaaaa");
+
         
     }
     

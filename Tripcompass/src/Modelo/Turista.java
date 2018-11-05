@@ -1,5 +1,5 @@
 package Modelo;
-// Generated 05-nov-2018 23:55:56 by Hibernate Tools 4.3.1
+// Generated 06-nov-2018 0:00:54 by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -16,7 +16,7 @@ public class Turista  implements java.io.Serializable {
      private String nombre;
      private String apellido;
      private BigDecimal telefono;
-     private String contraseña;
+     private String password;
      private Set reservas = new HashSet(0);
 
     public Turista() {
@@ -26,12 +26,12 @@ public class Turista  implements java.io.Serializable {
     public Turista(String emailTurista) {
         this.emailTurista = emailTurista;
     }
-    public Turista(String emailTurista, String nombre, String apellido, BigDecimal telefono, String contraseña, Set reservas) {
+    public Turista(String emailTurista, String nombre, String apellido, BigDecimal telefono, String password, Set reservas) {
        this.emailTurista = emailTurista;
        this.nombre = nombre;
        this.apellido = apellido;
        this.telefono = telefono;
-       this.contraseña = contraseña;
+       this.password = password;
        this.reservas = reservas;
     }
    
@@ -63,12 +63,12 @@ public class Turista  implements java.io.Serializable {
     public void setTelefono(BigDecimal telefono) {
         this.telefono = telefono;
     }
-    public String getContraseña() {
-        return this.contraseña;
+    public String getPassword() {
+        return this.password;
     }
     
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setPassword(String password) {
+        this.password = password;
     }
     public Set getReservas() {
         return this.reservas;

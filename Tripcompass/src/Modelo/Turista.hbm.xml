@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 05-nov-2018 23:55:56 by Hibernate Tools 4.3.1 -->
+<!-- Generated 06-nov-2018 0:00:55 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="Modelo.Turista" table="turista" schema="public" optimistic-lock="version">
         <id name="emailTurista" type="string">
@@ -17,8 +17,8 @@
         <property name="telefono" type="big_decimal">
             <column name="telefono" precision="131089" scale="0" />
         </property>
-        <property name="contrase&#241;a" type="string">
-            <column name="contrase&#241;a" />
+        <property name="password" type="string">
+            <column name="password" />
         </property>
         <set name="reservas" table="reserva" inverse="true" lazy="true" fetch="select">
             <key>

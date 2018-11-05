@@ -1,5 +1,5 @@
 package Modelo;
-// Generated 05-nov-2018 23:55:56 by Hibernate Tools 4.3.1
+// Generated 06-nov-2018 0:00:54 by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -13,7 +13,7 @@ public class Guia  implements java.io.Serializable {
 
 
      private String emailGuia;
-     private String contraseña;
+     private String passwordGuia;
      private String sexo;
      private String nombre;
      private String apellido;
@@ -27,9 +27,9 @@ public class Guia  implements java.io.Serializable {
     public Guia(String emailGuia) {
         this.emailGuia = emailGuia;
     }
-    public Guia(String emailGuia, String contraseña, String sexo, String nombre, String apellido, BigDecimal telefono, Set tourses) {
+    public Guia(String emailGuia, String passwordGuia, String sexo, String nombre, String apellido, BigDecimal telefono, Set tourses) {
        this.emailGuia = emailGuia;
-       this.contraseña = contraseña;
+       this.passwordGuia = passwordGuia;
        this.sexo = sexo;
        this.nombre = nombre;
        this.apellido = apellido;
@@ -44,12 +44,12 @@ public class Guia  implements java.io.Serializable {
     public void setEmailGuia(String emailGuia) {
         this.emailGuia = emailGuia;
     }
-    public String getContraseña() {
-        return this.contraseña;
+    public String getPasswordGuia() {
+        return this.passwordGuia;
     }
     
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setPasswordGuia(String passwordGuia) {
+        this.passwordGuia = passwordGuia;
     }
     public String getSexo() {
         return this.sexo;

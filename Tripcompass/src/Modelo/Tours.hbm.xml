@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-nov-2018 23:55:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Tours" table="tours" schema="public" optimistic-lock="version">
+        <id name="codTour" type="int">
+            <column name="cod_tour" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="guia" class="Modelo.Guia" fetch="select">
+            <column name="email_guia" not-null="true" />
+        </many-to-one>
+        <property name="ciudad" type="string">
+            <column name="ciudad" />
+        </property>
+        <property name="idioma" type="string">
+            <column name="idioma" />
+        </property>
+        <property name="duracion" type="java.lang.Integer">
+            <column name="duracion" />
+        </property>
+        <property name="valoracion" type="big_decimal">
+            <column name="valoracion" precision="30" scale="6" />
+        </property>
+        <property name="descripcionTour" type="string">
+            <column name="descripcion_tour" />
+        </property>
+        <property name="descripcionGuia" type="string">
+            <column name="descripcion_guia" />
+        </property>
+        <property name="puntoEncuentro" type="string">
+            <column name="punto_encuentro" />
+        </property>
+        <set name="reservas" table="reserva" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="cod_tour" not-null="true" />
+            </key>
+            <one-to-many class="Modelo.Reserva" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-nov-2018 23:55:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Reserva" table="reserva" schema="public" optimistic-lock="version">
+        <id name="codReserva" type="long">
+            <column name="cod_reserva" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="tours" class="Modelo.Tours" fetch="select">
+            <column name="cod_tour" not-null="true" />
+        </many-to-one>
+        <many-to-one name="turista" class="Modelo.Turista" fetch="select">
+            <column name="email_turista" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
